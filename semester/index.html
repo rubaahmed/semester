@@ -1,0 +1,278 @@
+<!-- Design a web page using HTML to show your semester schedule  -->
+<!-- 
+ Doc. Contents:
+1. Head 
+    1-1 title
+    1-2 Style
+    
+2. body
+    2-1 home
+    2-2 section header
+    3-2 table
+    
+3. footer
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <!-- 1. head -->
+
+    <head>
+
+        <!-- 1-1 title -->
+        <meta charset="UTF-8">
+        <title>semester schedule 2021</title>
+
+        <!-- 1-2 Style -->
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color:#42455a;
+        }
+
+        .section-header {
+            text-align: center;
+        }
+
+        .section-header .section-title {
+            font-size: 35px;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .section-header .line {
+            display: block;
+            width: 50px;
+            height: 5px;
+            background: #42455a;
+            margin: 0 auto;
+
+        }
+
+        .pd-y {
+            padding: 100px 0;
+        }
+
+        .home {
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+        }
+
+        .home-content {
+            position: absolute;
+            width: 65%;
+            /* hero image */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .home .title {
+            color: #fff;
+            font-size: 50px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .home .btn {
+            min-width: 160px;
+            padding: 15px 0;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .home .btn-start {
+            margin-right: 10px;
+            background: #fff;
+        }
+
+        .home .btn-learn {
+            background: #42455a;
+            color: #fff;
+        }
+
+        .even {
+            background:#cbd0f1;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            background: #f2f2f2;
+        }
+
+        td,
+        th {
+            border-top: 1px solid #42455a;
+            padding: 10px;
+        }
+
+        td {
+            border-left: 1px solid #42455a;
+            border-right: 1px solid #ECF0F1;
+        }
+
+        pre {
+            font-family: sans-serif;
+            background: #42455a;
+            padding: 10px;
+            margin: 0;
+        }
+
+    </style>
+    </head>
+
+
+    <!-- 2. body -->
+
+    <body>
+
+        <!-- 2-1 home -->
+
+        <div class="home">
+            <div class="overlay">
+                <div class="home-content">
+                    <h1 class="title">Semester Schedule 2021</h1>
+                    <a href="https://my.ucas.edu.ps/Registration/semester_table"
+                        target="_blank"><button class="btn btn-start
+                            hover-opacity">Go to Website</button></a>
+                    <a href="#table"><button class="btn btn-learn
+                            hover-opacity">Learn More</button></a>
+                </div> <!-- ./home-content -->
+            </div> <!-- ./overlay -->
+        </div> <!-- ./home -->
+
+
+        <!-- 2-3 Section Header -->
+
+        <div class="section-header pd-y">
+            <h2 class="section-title">The Sehedule</h2>
+            <span class="line"></span>
+        </div> <!-- ./section-header -->
+
+        <!-- 2-2 table -->
+
+        <table>
+
+            <thead>
+                <tr style="background:#42455a;">
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                    <th>Class</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>COMP 2115</td>
+                    <td>Logic Design Lab</td>
+                    <td>W103</td>
+                    <td></td>
+                    <td>13:00 - 15:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr class="even">
+                    <td>COMP 2307</td>
+                    <td>Web Design</td>
+                    <td>W103</td>
+                    <td>12:00 -14:00</td>
+                    <td></td>
+                    <td>12:00 - 14:00</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>COMP 3111</td>
+                    <td>Microprocessor & Assembly Languages Lab</td>
+                    <td>W103</td>
+                    <td></td>
+                    <td></td>
+                    <td>10:00 - 12:00</td>
+                    <td></td>
+                </tr>
+
+                <tr class="even">
+                    <td>COMP 2315</td>
+                    <td>Logic Design</td>
+                    <td>W103</td>
+                    <td></td>
+                    <td>12:00 - 13:30</td>
+                    <td></td>
+                    <td>12:00 - 13:30</td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 10px;">COMP 2314</td>
+                    <td>Data Structure & Algorithm</td>
+                    <td>W301</td>
+                    <td>8:00 - 10:00</td>
+                    <td></td>
+                    <td>8:00 - 10:00</td>
+                    <td></td>
+                </tr>
+
+                <tr class="even">
+                    <td>COMP 3311</td>
+                    <td>Microprocessor & Assembly Languages</td>
+                    <td>A706</td>
+                    <td></td>
+                    <td>8:00 - 9:30</td>
+                    <td></td>
+                    <td>8:00 - 9:30</td>
+                </tr>
+
+                <tr>
+                    <td>MATH 2107</td>
+                    <td>Numerical Analysis Lab</td>
+                    <td>Z003</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8:00 - 10:00</td>
+                </tr>
+
+                <tr class="even">
+                    <td>MATH 2307</td>
+                    <td>Numerical Analysis</td>
+                    <td>W401</td>
+                    <td></td>
+                    <td>9:30 - 11:00</td>
+                    <td>13:30 - 15:00</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </body>
+
+
+    <!-- 3. footer -->
+
+    <footer id="table">
+        <pre>     GPA: 88.75%            Semester Average: 90.05%            Study Hours: 59            Hours of success: 59</pre>
+    </footer> <!-- #/table -->
+
+</html>
